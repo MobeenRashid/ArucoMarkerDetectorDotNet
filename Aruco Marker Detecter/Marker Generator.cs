@@ -178,7 +178,7 @@ namespace Aruco_Marker_Detecter
             }
 
             string filePath = Path.Combine(MainForm.DirectoryPath, $"{markerId.ToString("d")}.png");
-            using (FileStream fileStream = new FileStream(filePath, FileMode.OpenOrCreate))
+            using (FileStream fileStream = new FileStream(filePath, FileMode.CreateNew))
             {
                 img.Save(fileStream, ImageFormat.Png);
             }
